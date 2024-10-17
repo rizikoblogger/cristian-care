@@ -309,5 +309,8 @@
 	"Click here": "Click here",
 	"If you are a Developer and want to change or expand something": "If you are a Developer and want to change or expand something",
 	"If you want to donate once, twice or support us on spreading this free software": "If you want to donate once, twice or support us on spreading this free software",
-	"If you are someone who want to participate deeply or understand a bit more about the Project": "If you are someone who want to participate deeply or understand a bit more about the Project"
+	"If you are someone who want to participate deeply or understand a bit more about the Project": "If you are someone who want to participate deeply or understand a bit more about the Project",
+	"To install it": "To install it",
+	"First, install [Node.js]": "First, install [Node.js]",
+	"Second, download [Distribution Version]": "Second, download [Distribution Version]"
 }
