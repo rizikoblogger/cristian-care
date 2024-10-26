@@ -1,10 +1,10 @@
 <div id="homepage" v-cloak>
   <div style="padding-top: 100px; padding-bottom: 25px; color: #14acc2;" class="d-flex flex-column justify-content-around" purpose="full-page-hero">
-    <div class="container">
+    <div class="container text-primary-emphasis">
 
         <div class="display-1 text-primary-emphasis text-center"><%=__('Cristian Care Project')%></div>
 
-        <p class="fw-bolder text-primary-emphasis mt-3">
+        <p class="fw-bolder mt-3">
             <%=__('It aims to give a free and open-source Web Software to whom want to manager its congregant also as a communit of IT Servants of God`s Kingdom. ')%>
         </p>
         <p class="text-primary-emphasis">
@@ -77,20 +77,79 @@
         <div style="height: 15rem;"></div>
 
         <section id="install">
+            <hr>
             <div style="height: 10rem;"></div>
             <div class="display-2 text-primary">
                 <%=__('How to Install')%>
             </div>
             <div class="row">
                 <div class="col">
-                    <p><%=__('To install it')%></p>
-                    <ul>
-                        <li><%=__('First, install [Node.js]')%> :(<a href="https://nodejs.org/pt/download/package-manager"><%=__('Click here')%></a>)</li>
-                        <li><%=__('Second, download [Distribution Version]')%> :(<a href="#"><%=__('Click here')%></a>)</li>
-                    </ul>
+                    <p><%=__('To install it')%> <%=__('Follow these instructions')%></p>
+                    <ol>
+                        <li><%=__('First, download and install [Node.js]')%> :(<a href="https://nodejs.org/pt/download/package-manager"><%=__('Click here')%></a>)</li>
+                        <li><%=__('Second, download our [Distribution Version]')%> :(<a href="#"><%=__('Click here')%></a>)</li>
+                        <li><%=__('According your Operational System (Windows, Linux, Unix, Mac OS, et alll), do set the Environment Variables below: ')%>
+                            (<a target="_blank" href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/Environment_Variables.html"><%=__('Click here')%></a>)
+                            
+                        
+                            <pre class="bg-dark text-success p-2">
+                                <code>
+# Are you running as [production] or [development]?
+NODE_ENV=production
+# Where (domain) will your server run?
+BASE_URL=http://localhost
+# Which server port should be exposed?
+SERVER_PORT=80
+# Who will send emails from Application to clients?
+FROM_EMAIL_ADDRESS=no_reply@example.com
+# How sender want to be recognized?
+FROM_NAME=The Cristan Care`s Team
+# Who will receive customer support emails?
+INTERNAL_EMAIL_ADDRESS=support+development@example.com
+# Brand new emails should be validated [true] or [false]?
+VERIFY_EMAIL_ADDRESS=false
+# To receive payments - you should create an 'https://stripe.com/' account
+STRIPE_PUBLISHABLE_KEY=k_test_Zzd814nldl91104qor5911gjald
+STRIPE_SECRET=sk_test_Zzd814nldl91104qor5911gjald
+# To send emails - you should create an 'https://sendgrid.com' account
+SEND_GRID_SECRET=sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm
+# Which kind of database adapter must to be used [sails-disk], [sails-mongo], [sails-mysql]...
+# https://sailsjs.com/documentation/concepts/extending-sails/adapters/available-adapters
+DATASTORE_ADAPTER=sails-disk
+DATASTORE_URL=mysql://user:password@host:port/database
+        
+                                </code>
+                            </pre>
+                        </li>
+                        <li>
+                            <%=__('Update your libraries with [npm install] at shell command')%>
+                            <pre class="bg-dark text-success p-2 text-start">
+                                <code>
+                                    $ npm install
+                                    </code>
+                                    </pre>
+                            </li>
+                        <li>
+                            <%=__('If you want to run as Docker Container, do read DOCKER.md file for more information.')%>                            
+                            
+                        </li>
+                        <li>
+                            <%=__('If you want to run as Standalone Server, type [node app.js] or [npm start] at shell command')%>
+                            <pre class="bg-dark text-success p-2 text-start">
+                                <code>
+                                    $ node app.js
+                                </code>
+                            </pre>
+                            </li>
+                            <li>
+                                <%=__('It is enought to run your application. If everything is ok, you will see the app running at http://server:port/')%></li>
+                    </ol>
                 </div>
                 <div class="col">
-
+                    <div class="card">
+                        <img class="card-img" src="/images/install.png" alt="Install" srcset="">
+                        
+                        </div>
                 </div>
             </div>
 
@@ -98,11 +157,71 @@
         </section>
 
         <section id="maintain">
+            <hr>
             <div style="height: 10rem;"></div>
             <div class="display-2 text-primary">
                 <%=__('How to Maintain')%>
             </div>
-            <img class="card-img" src="/images/maintenance.png" alt="Customize">
+
+<div class="row">
+    <div class="col">
+        <p>
+            <%=__('Cristian Care is a FullStack Web JavaScript Software developed with Sails.js framework')%>.
+            </p>
+            <p>
+                <%=__('If you want to mantains this software you should learn Sails.js first, but JavaScripts experts.')%>.
+                </p>
+                <p><%=__('Basic instructions to get you acquainted with this technology')%>  <a href="/step-by-step">(<%=__('Click here')%>).</a>  </p>
+                <p><%=__('During maintenance process you should find somethig like...')%></p>
+                <pre class="bg-dark text-success">
+                    <code>
+/**
+ * Route Mappings
+ * (sails.config.routes)
+ *
+ * Your routes tell Sails what to do each time it receives a request.
+ *
+ * For more information on configuring custom routes, check out:
+ * https://sailsjs.com/anatomy/config/routes-js
+ */
+
+module.exports.routes = {
+
+  //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
+  //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
+  //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
+  'GET /':                   { action: 'view-homepage-or-redirect' },
+  'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
+
+  'GET /faq':                { action:   'view-faq' },
+  'GET /legal/terms':        { action:   'legal/view-terms' },
+  'GET /legal/privacy':      { action:   'legal/view-privacy' },
+  'GET /contact':            { action:   'view-contact' },
+
+  'GET /signup':             { action: 'entrance/view-signup' },
+  'GET /email/confirm':      { action: 'entrance/confirm-email' },
+  'GET /email/confirmed':    { action: 'entrance/view-confirmed-email' },
+
+  'GET /login':              { action: 'entrance/view-login' },
+  'GET /password/forgot':    { action: 'entrance/view-forgot-password' },
+  'GET /password/new':       { action: 'entrance/view-new-password' },
+
+  'GET /account':            { action: 'account/view-account-overview' },
+  'GET /account/password':   { action: 'account/view-edit-password' },
+  'GET /account/profile':    { action: 'account/view-edit-profile' },
+
+
+
+
+                        </code>
+                    </pre>
+        </div>
+    </div>
+    <div class="col">
+        <img class="card-img" src="/images/maintenance.png" alt="Customize">
+        
+        </div>
+
 
         </section>
 

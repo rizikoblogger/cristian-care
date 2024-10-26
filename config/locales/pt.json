@@ -312,5 +312,22 @@
 	"If you are someone who want to participate deeply or understand a bit more about the Project": "If you are someone who want to participate deeply or understand a bit more about the Project",
 	"To install it": "To install it",
 	"First, install [Node.js]": "First, install [Node.js]",
-	"Second, download [Distribution Version]": "Second, download [Distribution Version]"
+	"Second, download [Distribution Version]": "Second, download [Distribution Version]",
+	"Chose": "Chose",
+	"Here": "Here",
+	"Have an account": "Have an account",
+	"According your Operational System (Windows, Linux, Unix, Mac OS, et alll), do set the following Environment Variables: ": "According your Operational System (Windows, Linux, Unix, Mac OS, et alll), do set the following Environment Variables: ",
+	"If you want to run as Docker Container, do read DOCKER.md file for more information.": "If you want to run as Docker Container, do read DOCKER.md file for more information.",
+	"If you want to run as Standalone Server, do [node app.js] or [npm start]": "If you want to run as Standalone Server, do [node app.js] or [npm start]",
+	"Update your libraries with [npm install] at shell command": "Update your libraries with [npm install] at shell command",
+	"If you want to run as Standalone Server, type [node app.js] or [npm start] at shell command": "If you want to run as Standalone Server, type [node app.js] or [npm start] at shell command",
+	"It is enought to run your application. If everything is ok, you will see the app running at http://server:port/": "It is enought to run your application. If everything is ok, you will see the app running at http://server:port/",
+	"According your Operational System (Windows, Linux, Unix, Mac OS, et alll), do set the Environment Variables below: ": "According your Operational System (Windows, Linux, Unix, Mac OS, et alll), do set the Environment Variables below: ",
+	"Follow these instructions": "Follow these instructions",
+	"First, download and install [Node.js]": "First, download and install [Node.js]",
+	"Second, download our [Distribution Version]": "Second, download our [Distribution Version]",
+	"Cristian Care is a FullStack Web JavaScript Software developed with Sails.js framework": "Cristian Care is a FullStack Web JavaScript Software developed with Sails.js framework",
+	"If you want to mantains this software you should learn Sails.js first, but JavaScripts experts.": "If you want to mantains this software you should learn Sails.js first, but JavaScripts experts.",
+	"Basic instructions to get you acquainted with this technology": "Basic instructions to get you acquainted with this technology",
+	"During maintenance process you should find somethig like...": "During maintenance process you should find somethig like..."
 }
