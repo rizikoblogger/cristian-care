@@ -35,6 +35,8 @@ module.exports.routes = {
 
   'GET /step-by-step':       { action: 'view-step-by-step' },
 
+  'GET /releases': { action: 'view-releases' },
+
 
 
 
