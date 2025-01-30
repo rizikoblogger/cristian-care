@@ -63,5 +63,6 @@
 	"Sign out": "Sign out",
 	"Releases": "Releases",
 	"Available Releases": "Available Releases",
-	"To download from GitHub Repository": "To download from GitHub Repository"
+	"To download from GitHub Repository": "To download from GitHub Repository",
+	"The basic working on concepts about a Sails.js application you need to know (for while) is:": "The basic working on concepts about a Sails.js application you need to know (for while) is:"
 }
