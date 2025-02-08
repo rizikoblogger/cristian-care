@@ -37,6 +37,8 @@ module.exports.routes = {
 
   'GET /releases': { action: 'view-releases' },
 
+  'GET /contribute/plans': { action: 'contribute/view-plans' },
+
 
 
 

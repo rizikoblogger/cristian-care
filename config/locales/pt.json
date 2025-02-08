@@ -64,5 +64,22 @@
 	"Releases": "Releases",
 	"Available Releases": "Available Releases",
 	"To download from GitHub Repository": "To download from GitHub Repository",
-	"The basic working on concepts about a Sails.js application you need to know (for while) is:": "The basic working on concepts about a Sails.js application you need to know (for while) is:"
+	"The basic working on concepts about a Sails.js application you need to know (for while) is:": "The basic working on concepts about a Sails.js application you need to know (for while) is:",
+	"This site contains four kind of information:": "This site contains four kind of information:",
+	"The third one is HOW TO SUPPORT AND COLLABORATE WITH THE PROJECT": "The third one is HOW TO SUPPORT AND COLLABORATE WITH THE PROJECT",
+	"The final one is HOW TO SUPPORT CONTACT US": "The final one is HOW TO SUPPORT CONTACT US",
+	"The final one is HOW TO CONTACT US": "The final one is HOW TO CONTACT US",
+	"Get in touch": "Get in touch",
+	"Have a question for us?": "Have a question for us?",
+	"Name": "Name",
+	"Please let us know what to call you": "Please let us know what to call you",
+	"Email address": "Email address",
+	"Please enter a valid email address": "Please enter a valid email address",
+	"Topic": "Topic",
+	"Please choose a topic for your message": "Please choose a topic for your message",
+	"Message": "Message",
+	"Message cannot be empty": "Message cannot be empty",
+	"Send message": "Send message",
+	"Thanks for reaching out": "Thanks for reaching out",
+	"We have received your message": "We have received your message"
 }
