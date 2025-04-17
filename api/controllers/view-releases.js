@@ -23,10 +23,10 @@ module.exports = {
       versions:
         [
           {
-            date: '2024-11-16',
+            date: '2025-04-16',
             name: '1.0.0-Leviticus',
             url: '',
-            details: 'Deleted outdated build.sh script and associated deploy commands from package.json. Updated configuration files to use environment variables for flexibility. Added Dockerfile for containerization and optimized asset paths in layout files.'
+            details: 'Added Dockerfile for containerization and optimized asset paths in layout files. Added Forum capabilities'
           },
           {
             date: '2024-06-01',
