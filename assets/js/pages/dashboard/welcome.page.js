@@ -4,7 +4,7 @@ parasails.registerPage('welcome', {
   //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
   data: {
     modal: '',
-    pageLoadedAt: Date.now()
+    pageLoadedAt: Date.now(),
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
