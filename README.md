@@ -45,6 +45,8 @@ To run this app, you will need to set the following environment variables
 * `BASE_URL` to the URL of your app.
 * `SENDGRID_SECRET` to configure this to enable support for automated emails.
 * `FROM_EMAIL_ADDRESS` as mail address for receiving support messages and other correspondences.
+* `STRIPE_PUBLISHABLE_KEY` to get available secure payment methods.
+* `STRIPE_SECRET` to get available secure payment methods.
 
 or you can set the [local] environment by creating one [/config/local.js] file containing:
 

@@ -391,8 +391,8 @@ module.exports = {
     baseUrl: process.env.BASE_URL,
     internalEmailAddress: 'support@example.com',
 
-    sendgridSecret: process.env.SENDGRID_SECRET
-    // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',
+    sendgridSecret: process.env.SENDGRID_SECRET,
+    stripeSecret: process.env.STRIPE_SECRET,
     //--------------------------------------------------------------------------
     // /\   OR, to avoid checking them in to version control, you might opt to
     // ||   set sensitive credentials like these using environment variables.

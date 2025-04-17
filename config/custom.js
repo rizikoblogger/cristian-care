@@ -88,8 +88,8 @@ module.exports.custom = {
   * (https://dashboard.stripe.com/account/apikeys)                          *
   *                                                                         *
   **************************************************************************/
-  // stripePublishableKey: 'pk_test_Zzd814nldl91104qor5911gjald',
-  // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
+  stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+  stripeSecret: process.env.STRIPE_SECRET,
   //--------------------------------------------------------------------------
   // /\  Configure these to enable support for billing features.
   // ||  (Or if you don't need billing, feel free to remove them.)
