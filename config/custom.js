@@ -32,7 +32,7 @@ module.exports.custom = {
   * > that is displayed all over the app when it's first generated.         *
   *                                                                         *
   **************************************************************************/
-  platformCopyrightYear: '2024',
+  platformCopyrightYear: '2025',
 
   /**************************************************************************
   *                                                                         *
@@ -68,7 +68,7 @@ module.exports.custom = {
   //--------------------------------------------------------------------------
 
   // The sender that all outgoing emails will appear to come from.
-  fromEmailAddress: 'noreply@example.com',
+  fromEmailAddress: process.env.FROM_EMAIL_ADDRESS,
   fromName: 'The [Cristian Care] Team',
 
   // Email address for receiving support messages & other correspondences.
