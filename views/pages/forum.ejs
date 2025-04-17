@@ -1,0 +1,62 @@
+<div id="forum" v-cloak class="container">
+
+    <h1><%= __('Forum') %>
+        <% __('Page') %>
+    </h1>
+
+    <hr>
+    <a href="#" @click="showModal=true"><%=__('Create')%> <%=__('Question')%></a>
+    <hr>
+
+    <%if(me && me.isSuperAdmin) {%>
+    <p>
+       <%=__('As SuperAdmin you will see only the Unmoderated ones')%>
+    </p>
+    <%}%>
+
+    <section v-for="(question, index) in questions">
+        <span class="text-primary text-uppercase">
+            <a v-if="!question.isModerated" href="#" @click="approve(question)"><%=__('Approve')%></a>
+            <a v-if="question.isModerated" href="#" @click="reply(question)"><%=__('Reply')%></a>
+            {{index+1}}.
+            {{question.text}}
+            (<js-timestamp :at="question.createdAt"></js-timestamp>)
+        </span>
+        <ol style="list-style: lower-alpha">
+            <li v-for="answer in question.forumanswers" >
+                <a v-if="!answer.isModerated" href="#" @click="approveReply(answer)"><%=__('Approve')%></a>
+                <em class="fw-bolder">
+                    {{answer.text}}
+                    (<js-timestamp :at="answer.createdAt"></js-timestamp>)
+                </em>
+            </li>
+        </ol>
+    </section>
+
+    <div class="card" v-if="showModal" >
+        <div class="card-body">
+
+            <label for="tx"><%=__('Question')%></label>
+            <textarea id="tx" class="form-control" name="text" cols="30" rows="10" v-model="text" placeholder="<%=__('Type your question')%>"></textarea>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" @click="save()"><%=__('Save')%></button>
+            <button class="btn btn-primary" @click="showModal=false"><%=__('Cancel')%></button>
+        </div>
+    </div>
+
+    <div class="card" v-if="showAnswerModal" >
+        <div class="card-body">
+
+            <label for="tx"><%=__('Reply')%></label>
+            <textarea id="tx" class="form-control" name="text" cols="30" rows="10" v-model="text" placeholder="<%=__('Type your question')%>"></textarea>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" @click="saveReply()"><%=__('Save')%></button>
+            <button class="btn btn-primary" @click="showAnswerModal=false"><%=__('Cancel')%></button>
+        </div>
+    </div>
+
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

@@ -100,5 +100,20 @@
 	"So,": "So,",
 	"will be available after your logging": "will be available after your logging",
 	"to edit it and add Policies capabilities": "to edit it and add Policies capabilities",
-	"Basically, we have done all steps to create a brand-new page and functionality to our customer and  - from now - we just wish you have fun.": "Basically, we have done all steps to create a brand-new page and functionality to our customer and  - from now - we just wish you have fun."
+	"Basically, we have done all steps to create a brand-new page and functionality to our customer and  - from now - we just wish you have fun.": "Basically, we have done all steps to create a brand-new page and functionality to our customer and  - from now - we just wish you have fun.",
+	"It was not translated by Sails.js Tec intentionally": "It was not translated by Sails.js Tec intentionally",
+	"Forum": "Forum",
+	"Page": "Page",
+	"Create": "Create",
+	"Question": "Question",
+	"Type your question": "Type your question",
+	"Save": "Save",
+	"Create Question": "Create Question",
+	"As SuperAdmin you will see only the Unmoderated ones": "As SuperAdmin you will see only the Unmoderated ones",
+	"Approve": "Approve",
+	"Reply": "Reply",
+	"Sorry": "Sorry",
+	"Weve encountered an unexpected error": "Weve encountered an unexpected error",
+	"Need further help accessing your account": "Need further help accessing your account",
+	"Open a help request": "Open a help request"
 }

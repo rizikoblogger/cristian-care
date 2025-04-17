@@ -39,6 +39,8 @@ module.exports.routes = {
 
   'GET /contribute/plans': { action: 'contribute/view-plans' },
 
+  'GET /forum': { action: 'view-forum' },
+
 
 
 
@@ -71,4 +73,6 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
+  'POST /api/v1/forum/save-forum': { action: 'forum/save-forum' },
+  'POST /api/v1/forum/save-forumanswer': { action: 'forum/save-forumanswer' },
 };
