@@ -33,6 +33,16 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
+  'GET /step-by-step':       { action: 'view-step-by-step' },
+
+  'GET /releases': { action: 'view-releases' },
+
+  'GET /contribute/plans': { action: 'contribute/view-plans' },
+
+  'GET /forum': { action: 'view-forum' },
+
+
+
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
@@ -63,4 +73,6 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
+  'POST /api/v1/forum/save-forum': { action: 'forum/save-forum' },
+  'POST /api/v1/forum/save-forumanswer': { action: 'forum/save-forumanswer' },
 };

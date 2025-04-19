@@ -1,0 +1,195 @@
+
+<div id="step-by-step" v-cloak class="container">
+
+    <h1><%= __('Step by Step About Sails.js') %>.</h1>
+
+    <hr>
+
+    <p><%= __('There are a lot of places where you can learn about Sails.js Framework.') %></p>
+
+    <p><%= __('Also there are several teaching providers where you can learn about it.') %></p>
+
+    <p><%= __('So, you can see bellow a few list of places where you can learn more by yourself.') %></p>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="https://sailsjs.org/documentation" target="_blank">Sails.js Documentation (en)</a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.sailsjs.tec.br/" target="_blank">Sails.js Tech (pt-BR)</a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.udemy.com/course/building-rest-apis-with-sailsjs/" target="_blank">Udemy</a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.youtube.com/watch?v=AmjiDC_JUt4" target="_blank">Youtube</a>
+        </li>
+    </ul>
+
+    <h3 class="mt-3"><%=__('But, if you are already ready to start coding, we can tell you how to do it faster. Let`s go!')%></h3>
+
+    <p>
+        <em class="badge bg-primary">1</em>
+        <%=__('If you didn`t do it, follow the installing instructions at main page to set your environment')%> <a
+                href="/#install"><%=__('Here')%></a>
+    </p>
+    <p>
+        <em class="badge bg-primary">2</em>
+        <%=__('At root directory just type')%> <code>sails generate model [database-table-name-or-object]</code> <%=__('to create an Entity Model')%>.
+    </p>
+    <p>
+        <em class="badge bg-primary">3</em>
+        <%=__('At root directory just type')%> <code>sails generate page [page-name]</code> <%=__('to create a Blank HTML/EJS Page')%>.
+    </p>
+    <p>
+        <em class="badge bg-primary">4</em>
+        <%=__('Locate and open the file')%> <code>view-[page-name].js</code> <%=__('to edit it and add Entity Model capability')%>.
+    </p>
+<pre style="font-family: 'Courier 10 Pitch',serif; background-color: #111; color: limegreen; padding: 10px; border-radius: 5px;">
+module.exports = {
+
+
+  friendlyName: 'View [page-name] page.',
+
+
+  description: 'Display "page-name" page.',
+
+
+  exits: {
+
+    success: {
+      viewTemplatePath: 'pages/page-name'
+    }
+
+  },
+
+
+  fn: async function () {
+
+    const database-table-name-or-object = sails.models.database-table-name-or-object // All lower-cased
+    const list = await database-table-name-or-object.find(); // Find All records at Entity Model%
+    return {list: list}; // sends it to view template declared above as Vue2 variable to be used like <%-'{ { list } }'%> in [page-name].ejs
+                         // or like this.list in Vue2 component called [page-name].page.js
+                         // or like &lt;%=list%&gt; in [page-name].ejs.
+
+  }
+
+
+};
+
+</pre>
+
+    <p>
+        <em class="badge bg-primary">5</em>
+        <%=__('Locate and open the file')%> <code>[page-name].ejs</code> <%=__('to edit it and add Entity Model capability')%>.
+    </p>
+<pre style="font-family: 'Courier 10 Pitch',serif; background-color: #111; color: limegreen; padding: 10px; border-radius: 5px;">
+&lt;div id="page-name" v-cloak&gt;
+
+  &lt;div class="container pt-5 pb-5"&gt;
+
+    <code>
+        <%-'{ { list.length } }'%>
+    </code>
+
+    &lt;%=list.length%&gt;
+
+  &lt;h1&gt;FAQ&lt;/h1&gt;
+</pre>
+
+    <p>
+        <em class="badge bg-primary">6</em>
+        <%=__('Locate and open the file')%> <code>[page-name].page.js</code> <%=__('to edit it and add Entity Model capability')%>.
+    </p>
+<pre style="font-family: 'Courier 10 Pitch',serif; background-color: #111; color: limegreen; padding: 10px; border-radius: 5px;">
+parasails.registerPage('page-name', {
+
+  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
+  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
+  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+  data: {
+    notPreLoadedVariable: 'notPreLoadedVariableValue'
+  },
+
+  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
+  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
+  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+  beforeMount: function() {
+    //…
+  },
+  mounted: async function(){
+    this.notPreLoadedVariable = this.list.length;
+    console.log(`This list length is ${this.list.length}`)
+    console.log(`This not pre loaded variable length is also ${this.notPreLoadedVariable}`)
+    console.log(`note notPreloadedVariable is 'notPreLoadedVariableValue' no more`)
+  },
+
+  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
+  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
+  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+  methods: {
+    //…
+  }
+});
+
+</pre>
+
+    <p>
+        <em class="badge bg-primary">7</em>
+        <%=__('Locate and open the file')%> <code>config/routes.js</code> <%=__('to edit it and add Routing capabilities')%>.
+        <br>
+        <code>'GET /page-name-path': { action: 'controllers/view-page-name' },</code>
+    </p>
+    <p>
+        <em class="badge bg-primary">8</em>
+        <%=__('Restart it with')%> <code>sails lift</code> or <code>npm start</code>. <%=__('So,')%>
+        <br>
+        <code>http://server:port/page-name-path</code> <%=__('will be available after your logging')%>
+    </p>
+    <p>
+        <em class="badge bg-primary">9</em>
+        <%=__('Locate and open the file')%> <code>config/policies.js</code> <%=__('to edit it and add Policies capabilities')%>.
+        <br>
+    </p>
+    <pre style="font-family: 'Courier 10 Pitch',serif; background-color: #111; color: limegreen; padding: 10px; border-radius: 5px;">
+ /**
+ * Policy Mappings
+ * (sails.config.policies)
+ *
+ * Policies are simple functions which run **before** your actions.
+ *
+ * For more information on configuring policies, check out:
+ * https://sailsjs.com/docs/concepts/policies
+ */
+
+module.exports.policies = {
+
+  '*': 'is-logged-in',
+
+  // Bypass the `is-logged-in` policy for:
+  'entrance/*': true,
+  'account/logout': true,
+  'view-homepage-or-redirect': true,
+  'view-faq': true,
+  'view-contact': true,
+  'legal/view-terms': true,
+  'legal/view-privacy': true,
+  'deliver-contact-form-message': true,
+  'contribute/*':true,
+  'view-releases/*': true,
+
+  'view-page-name': true, // <--- Add this line here to enable this route action as public
+
+};
+
+    </pre>
+
+    <p>
+        <em class="badge bg-primary">10</em>
+        <%=__('Basically, we have done all steps to create a brand-new page and functionality to our customer and  - from now - we just wish you have fun.')%>
+    </p>
+
+
+
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

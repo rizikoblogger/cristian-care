@@ -1,106 +1,299 @@
 <div id="homepage" v-cloak>
-  <div style="padding-top: 100px; padding-bottom: 25px; color: #14acc2;" class="d-flex flex-column justify-content-center position-relative" purpose="full-page-hero">
-    <div class="container text-center">
-      <div style="width: 220px; height: 170px;" class="mx-auto position-relative">
-        <img style="width: 170px; left: 25px; top: 25px;" class="position-absolute" alt="The sky above the ocean" src="/images/hero-sky.png"/>
-        <img style="width: 80px; top: 55px; left: -40px;" class="position-absolute" purpose="cloud-1" alt="A grayish-blue cloud" src="/images/hero-cloud.png"/>
-        <img style="width: 80px; top: 45px; left: -40px;" class="position-absolute" purpose="cloud-2" alt="Another grayish-blue cloud" src="/images/hero-cloud.png"/>
-        <img style="width: 160px; bottom: 50px; left: 18px;" class="position-absolute" purpose="ship" alt="A ship hovering a few feet over the surface of the water, bearing a flagpole with the Sails.js logo" src="/images/hero-ship.png"/>
-        <img style="width: 170px; bottom: 40px; left: 25px;" class="position-absolute" alt="The shadow of the floating ship on the water" src="/images/hero-water.png"/>
-      </div>
-      <h1 class="display-4 pb-5">A new <strong>Sails</strong> app.</h1>
-      <div>
-        <div style="cursor: pointer; bottom: 25px; left: 0;" class="position-absolute w-100 mt-5" purpose="more-info-text" @click="clickHeroButton()">
-          <div style="letter-spacing: 2px;" class="text-uppercase font-weight-bold">Dive in</div>
-          <div style="font-size: 20px;">&darr;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="background-color: rgba(238, 245, 249, 0.72);" class="text-center py-5" purpose="scroll-destination">
-    <div class="container pt-3 pb-5" purpose="about-section">
-      <h3>This is your freshly-generated project + a few extras.</h3>
-      <p style="max-width: 800px;" class="mx-auto">In our time <a target="_blank" href="https://sailsjs.com/about">building apps for customers</a>, we've found ourselves re-rolling some of the same key features over and over again between projects.  So we picked some of the things that kept popping up, implemented our own opinionated solutions for them, and then included it all in this free and open-source starter app.  We hope it helps you as much as it helps us!</p>
-      <div class="row pt-5">
-        <div class="mb-4 mb-sm-0 col-sm">
-          <div style="color: #fff; background-color: #14acc2; font-size: 35px; line-height: 75px; height: 75px; width: 75px;" class="rounded-circle mx-auto text-center mb-3">
-            <i class="fa fa-envelope"></i>
-          </div>
-          <h4>Emails</h4>
-          <p class="text-muted">Built-in support for internal emails from the <a href="/contact">contact form</a>, as well as transactional emails for users.</p>
-        </div>
-        <div class="pt-4 pt-sm-0 mb-4 mb-sm-0 col-sm">
-          <div style="color: #fff; background-color: #14acc2; font-size: 35px; line-height: 75px; height: 75px; width: 75px;" class="rounded-circle mx-auto text-center mb-3">
-            <i class="fa fa-lock"></i>
-          </div>
-          <h4>Authentication</h4>
-          <p class="text-muted">Ready-to-go, customizable <a href="/signup">sign up</a>, <a href="/login">login</a>, and <a href="/password/forgot">password recovery</a> flows for your users.</p>
-        </div>
-        <div class="pt-4 pt-sm-0 col-sm">
-          <div style="color: #fff; background-color: #14acc2; font-size: 35px; line-height: 75px; height: 75px; width: 75px;" class="rounded-circle mx-auto text-center mb-3">
-            <i class="fa fa-credit-card"></i>
-          </div>
-          <h4>Billing</h4>
-          <p class="text-muted">Hook up to your Stripe account for managing customers and payment sources.</p>
-        </div>
-      </div>
-      <a class="btn btn-outline-info mt-3" href="/faq">Learn more</a>
-    </div>
-  </div>
-  <div class="container pt-5">
-    <div class="pt-5" purpose="setup-section">
-      <h3 class="text-center">How to get started:</h3>
-      <div class="position-relative my-5" purpose="setup-step">
-        <div style="left: 0; top: 0; width: 140px;" class="position-absolute d-none d-lg-block">
-          <img alt="computer with email symbol on screen" src="/images/setup-email.png" class="w-100"/>
-        </div>
-        <h5>Set up your branding and content</h5>
-        <p>This starter app includes several different page templates (including the one you're reading right now) that you can change as much or as little as you like.  If there are any pages you won't need, just remove them.</p>
-        <p>To get started, do a global find/replace in this project for occurrences of <code>[Cristian Care]</code> and replace them all with the actual name of your app or platform (e.g. "Facebag").  Then do the same thing again to replace <code>[IBBT.org]</code> with the actual name of your organization (e.g. "Facebag Corporation").</p>
-        <blockquote><small>This app also includes a default <a href="/legal/terms">Terms of Use</a> and <a href="/legal/privacy">Privacy Policy</a>.  We want to make it easier for apps to be transparent about their users' rights and privacy.  But we are developers, not lawyers; and this is <em>definitely not legal advice</em>.  Before going live, be sure to replace these example documents with your own company's policies, and <a href="https://en.wikipedia.org/wiki/Counsel" target="_blank">seek counsel</a> for assistance if you need to design new terms from scratch.</small></blockquote>
-      </div>
-      <div class="position-relative my-5" purpose="setup-step">
-        <div style="left: 0; top: 0; width: 140px;" class="position-absolute d-none d-lg-block">
-          <img alt="computer with credit card icon on screen" src="/images/setup-payment.png" class="w-100"/>
-        </div>
-        <h5>Configure integrations</h5>
-        <p>In order for this app to send automated emails, you'll need to create a <a target="_blank" href="https://sendgrid.com/">Sendgrid</a> account.  Then, in <code>config/custom.js</code>, configure the following:</p>
-        <div class="card bg-light mb-4">
-          <div class="card-body"><pre><code><span class="text-muted">// Recipient of contact form messages</span>
-internalEmailAddress: my.email@example.com,
+    <div style="padding-top: 100px; padding-bottom: 25px; color: #14acc2;"
+         class="d-flex flex-column justify-content-around" purpose="full-page-hero">
+        <div class="container text-primary-emphasis">
 
-<span class="text-muted">// For outgoing emails</span>
-fromEmailAddress: 'noreply@example.com',
-fromName: 'The [Cristian Care] Team',
+            <div class="display-1 text-primary-emphasis text-center"><%= __('Cristian Care Project') %></div>
 
-<span class="text-muted">// Sendgrid settings</span>
-sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU'</code></pre>
-          </div>
+            <p class="fw-bolder mt-3">
+                <%= __('It aims to give a free and open-source Web Software to whom want to manager its congregant also as a community of IT Servants of God`s Kingdom. ') %>
+            </p>
+            <p class="text-primary-emphasis">
+                <%= __('This site contains four kind of information:') %>
+            </p>
+            <ul class="text-primary-emphasis">
+                <li><%= __('First one related to HOW TO INSTALL AND USE;') %></li>
+                <li><%= __('The second is about HOW TO MAINTAIN (OR EXPAND) ITS SOURCE-CODE; and') %></li>
+                <li><%= __('The third one is HOW TO SUPPORT AND COLLABORATE WITH THE PROJECT') %></li>
+                <li><%= __('The final one is HOW TO CONTACT US') %></li>
+            </ul>
+            <p class="text-primary-emphasis">
+                <%= __('Fell free to navigate among these information or contact us for more information.') %>
+
+            </p>
+            <div class="row mt-2">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div style="height: 15rem" class="card m-1">
+                        <span class="card-header card-title fw-bolder">
+                            <%= __('How to Install') %>
+                        </span>
+                        <div class="card-body">
+                            <%= __('If you just want to have a Software to support your Church Management') %>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#install"><%= __('Click here') %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div style="height: 15rem" class="card m-1">
+                        <span class="card-header card-title fw-bolder">
+                            <%= __('How to Maintain') %>
+                        </span>
+                        <div class="card-body">
+                            <%= __('If you are a Developer and want to change or expand something') %>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#maintain"><%= __('Click here') %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div style="height: 15rem" class="card m-1">
+                        <span class="card-header card-title fw-bolder">
+                            <%= __('How to Collaborate') %>
+                        </span>
+                        <div class="card-body">
+                            <%= __('If you want to donate once, twice or support us on spreading this free software') %>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#collaborate"><%= __('Click here') %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div style="height: 15rem" class="card m-1">
+                        <span class="card-header card-title fw-bolder">
+                            <%= __('Contact') %>
+                        </span>
+                        <div class="card-body">
+                            <%= __('If you are someone who want to participate deeply or understand a bit more about the Project') %>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/contact"><%= __('Click here') %></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 15rem;"></div>
+
+            <section id="install">
+                <hr>
+                <div style="height: 10rem;"></div>
+                <div class="display-2 text-primary">
+                    <%= __('How to Install') %>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><%= __('To install it') %> <%= __('Follow these instructions') %></p>
+                        <ol>
+                            <li><%= __('First, download and install [Node.js]') %> :(<a
+                                        href="https://nodejs.org/pt/download/package-manager"><%= __('Click here') %></a>)
+                            </li>
+                            <li><%= __('Second, download our [Distribution Version]') %> :(<a
+                                        href="/releases"><%= __('Click here') %></a>)
+                            </li>
+                            <li><%= __('According your Operational System (Windows, Linux, Unix, Mac OS, et all), do set the Environment Variables below: ') %>
+                                (<a target="_blank"
+                                    href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/Environment_Variables.html"><%= __('Click here') %> <%= __('to know how to do it') %></a>)
+
+
+                                <pre class="bg-dark text-success p-2">
+                                <code>
+# Are you running as [production] or [development]?
+NODE_ENV=production
+# Where (domain) will your server run?
+BASE_URL=http://localhost
+# Which server port should be exposed?
+SERVER_PORT=80
+# Who will send emails from Application to clients?
+FROM_EMAIL_ADDRESS=no_reply@example.com
+# How sender want to be recognized?
+FROM_NAME=The Cristan Care`s Team
+# Who will receive customer support emails?
+INTERNAL_EMAIL_ADDRESS=support+development@example.com
+# Brand new emails should be validated [true] or [false]?
+VERIFY_EMAIL_ADDRESS=false
+# To receive payments - you should create an 'https://stripe.com/' account
+STRIPE_PUBLISHABLE_KEY=k_test_Zzd814nldl91104qor5911gjald
+STRIPE_SECRET=sk_test_Zzd814nldl91104qor5911gjald
+# To send emails - you should create an 'https://sendgrid.com' account
+SENDGRID_SECRET=sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm
+# Which kind of database adapter must to be used [sails-disk], [sails-mongo], [sails-mysql]...
+# https://sailsjs.com/documentation/concepts/extending-sails/adapters/available-adapters
+DATASTORE_ADAPTER=sails-disk
+DATASTORE_URL=mysql://user:password@host:port/database
+# Is it a MONGO_DB NO-SQL database?
+IS_MONGO_DB=false
+# The unique Encryption Key for the application
+DATA_ENCRYPTION_KEYS_DEFAULT=ffliOnsljHYX05U58V5AkDXHqMT+bTlVOKT+Q0LUpcA=
+                                </code>
+                            </pre>
+                            </li>
+                            <li>
+                                <%= __('Update your libraries with [npm install] at shell command') %>
+                                <pre class="bg-dark text-success p-2 text-start">
+<code>
+$ npm install
+</code>
+                                    </pre>
+                            </li>
+                            <li>
+                                <%= __('If you want to run as Docker Container, do read DOCKER.md file for more information.') %>
+
+                            </li>
+                            <li>
+                                <%= __('If you want to run as Standalone Server, type [node app.js] or [npm start] at shell command') %>
+                                <pre class="bg-dark text-success p-2 text-start">
+                                <code>
+                                    $ node app.js
+                                </code>
+                            </pre>
+                            </li>
+                            <li>
+                                <%= __('It is enough to run your application. If everything is ok, you will see the app running at http://server:port/') %></li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img" src="/images/install.png" alt="Install" srcset="">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section id="maintain">
+                <hr>
+                <div style="height: 10rem;"></div>
+                <div class="display-2 text-primary">
+                    <%= __('How to Maintain') %>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            <%= __('Cristian Care is a FullStack Web JavaScript Software developed with Sails.js framework') %>
+
+                        </p>
+                        <p>
+                            <%= __('If you want to mantains this software you should learn Sails.js first, but JavaScripts experts.') %>
+
+                        </p>
+                        <p><%= __('Basic instructions to get you acquainted with this technology') %> <a
+                                    href="/step-by-step">(<%= __('Click here') %>)</a></p>
+                        <p><%=__('To download from GitHub Repository')%> <a href="https://github.com/rizikoblogger/cuidado-cristao"><%=__('Click here')%></a></p>
+                        <p><%= __('During maintenance process you should find somethig like...') %></p>
+
+
+                        <pre class="bg-dark text-success p-2">
+                    <code>
+/**
+ * Route Mappings
+ * (sails.config.routes)
+ *
+ * Your routes tell Sails what to do each time it receives a request.
+ *
+ * For more information on configuring custom routes, check out:
+ * https://sailsjs.com/anatomy/config/routes-js
+ */
+
+module.exports.routes = {
+
+  //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
+  //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
+  //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
+  'GET /':                   { action: 'view-homepage-or-redirect' },
+  'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
+
+  'GET /faq':                { action:   'view-faq' },
+  'GET /legal/terms':        { action:   'legal/view-terms' },
+  'GET /legal/privacy':      { action:   'legal/view-privacy' },
+  'GET /contact':            { action:   'view-contact' },
+
+  'GET /signup':             { action: 'entrance/view-signup' },
+  'GET /email/confirm':      { action: 'entrance/confirm-email' },
+  'GET /email/confirmed':    { action: 'entrance/view-confirmed-email' },
+
+  'GET /login?restricted=false':              { action: 'entrance/view-login' },
+  'GET /password/forgot':    { action: 'entrance/view-forgot-password' },
+  'GET /password/new':       { action: 'entrance/view-new-password' },
+
+  'GET /account':            { action: 'account/view-account-overview' },
+  'GET /account/password':   { action: 'account/view-edit-password' },
+  'GET /account/profile':    { action: 'account/view-edit-profile' },
+
+
+
+
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+                <div class="col">
+                    <img class="card-img" src="/images/maintenance.png" alt="Customize">
+                </div>
+                <p><%=__('The basic working on concepts about a Sails.js application you need to know (for while) is:')%></p>
+                <ul>
+                    <li>The <em>backend</em> server have to be running, and you should know this server address and port</li>
+                    <li>The <em>browser</em> (i.e. Google Chrome) should be able to request a page from server/port</li>
+                    <li>So, browsers will request a page and backends will check if the given path (i.e. localhost:8080/faq) exists</li>
+                    <li>If does it exist, backend will check if there is a logged user and if there are routes to grant user access</li>
+                    <li>No authentication or policy restriction were find, so the 'api/controller/controller-name.js' (as router.js definitions) will be load</li>
+                    <li>If some data should be taken from datastore, the loaded controller will perform it and wait for answers</li>
+                    <li>After loading and running that controller, backend will return a data or a rendered EJS page to the browser.</li>
+                </ul>
+
+                <img class="card-img" src="/images/SailsOverwiew.png" alt="Workflow">
+
+                <p class="mt-4"><strong>So</strong>, to find where to start maintenance effort:</p>
+                <ul>
+                    <li>Do find the backend path requested</li>
+                    <li>Locate it into config/routes.js file</li>
+                    <li>Look for restrictions at config/policies.js file</li>
+                    <li>Open and edit related controller file (i.e. /api/controllers/view-faq.js file).</li>
+                </ul>
+                <p>If your research tells you should maintain a <em>view</em> (or *.ejs) file: </p>
+                <ul>
+                    <li>Look at controller file and try to locate the view used by controller (i.e. viewTemplatePath: 'pages/faq')</li>
+                    <li>Open /views/pages/[name].ejs files to find which component will be changed by you</li>
+                    <li>Open /assets/js/pages/[name].page.js files to find which Vue2 Framework data will also be changed by you</li>
+                </ul>
+                <p>If your maintenance was at *.ejs or *.page.js files only, just reload the page at Browser.</p>
+                <p>If your maintenance was at *.js files, You have to restart all application to see them working.</p>
+
+
+            </section>
+
+            <section id="collaborate">
+                <div style="height: 10rem;"></div>
+                <div class="display-2 text-primary">
+                    <%= __('How to Collaborate') %>
+                </div>
+                <img class="card-img" src="/images/support-us.png" alt="Customize">
+
+                <p class="mt-2 fw-bolder">You can...</p>
+                <ul>
+                    <li>Create an account and subscribe our STRIPE plans to keep it a free solution for the entire world <a href="/contribute/plans">Clicking here</a> </li>
+                    <li>No account, just help our support team to maintain this site and git repository by PAYPAL donating of $560BRL/year <a href="https://www.paypal.com/checkoutnow?atomic-event-state=eyJkb21haW4iOiJzZGtfcGF5cGFsX3Y1IiwiZXZlbnRzIjpbXSwiaW50ZW50IjoiY2xpY2tfcGF5bWVudF9idXR0b24iLCJpbnRlbnRUeXBlIjoiY2xpY2siLCJpbnRlcmFjdGlvblN0YXJ0VGltZSI6NTY3NiwidGltZVN0YW1wIjo1Njc2LCJ0aW1lT3JpZ2luIjoxNzMxNzg0MTkzMDU5LCJ0YXNrIjoic2VsZWN0X29uZV90aW1lX2NoZWNrb3V0IiwiZmxvdyI6Im9uZS10aW1lLWNoZWNrb3V0IiwidWlTdGF0ZSI6IndhaXRpbmciLCJwYXRoIjoiL3NtYXJ0L2J1dHRvbnMiLCJ2aWV3TmFtZSI6InBheXBhbC1zZGsifQ%3D%3D&sessionID=uid_d01eb3df02_mtk6mdk6nti&buttonSessionID=uid_c8daf64965_mtk6mdk6ntm&stickinessID=uid_2285e06f44_mtk6mdk6nti&smokeHash=&sign_out_user=false&fundingSource=paypal&buyerCountry=BR&locale.x=pt_BR&commit=true&client-metadata-id=uid_d01eb3df02_mtk6mdk6nti&clientID=AbAIRoGcziyBMQZp7821jGD2SOA0cfB4bUmGGz7Wd2Ky9bnLUd6AYO8jZs-8ZkKAnWxvfn_BqwZG_5v4&env=production&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9QWJBSVJvR2N6aXlCTVFacDc4MjFqR0QyU09BMGNmQjRiVW1HR3o3V2QyS3k5Ym5MVWQ2QVlPOGpacy04WmtLQW5XeHZmbl9CcXdaR181djQmdmF1bHQ9dHJ1ZSZpbnRlbnQ9c3Vic2NyaXB0aW9uIiwiYXR0cnMiOnsiZGF0YS1zZGstaW50ZWdyYXRpb24tc291cmNlIjoiYnV0dG9uLWZhY3RvcnkiLCJkYXRhLXVpZCI6InVpZF9tamhuYmR2dGpxc2VnaHppZXVvZWFidGh6anJsYmcifX0&country.x=BR&xcomponent=1&version=5.0.465&token=9UT00100Y32063327">Clicking here</a> </li>
+                    <li>No account, no STRIPE or PAYPAL, just donate any value to our partner Church<a target="_blank" href="https://igrejabarao.org.br/doacoes">Church Bank Accounts</a> </li>
+                    <li>No payment, but just pray for us, because it was made to bless.</li>
+                </ul>
+                <p></p>
+                <p class="mt-2 fw-bolder">You also can...</p>
+                <ul>
+                    <li>Join us on developing at <a href="https://github.com/rizikoblogger/cuidado-cristao">Git Hub</a></li>
+                    <li>Help others by installing or managing it at <a href="/forum">Cristian Care Forum</a> </li>
+                    <li>By Proposing new features or bug fixes at <a href="/contact">Contact Form</a></li>
+                    <li>Promoting it by spreading this site link ahead.</li>
+                </ul>
+                <p></p>
+
+            </section>
         </div>
-        <p>To enable support for billing features, you'll need to make a <a target="_blank" href="https://stripe.com">Stripe</a> account, then include your test credentials like so:</p>
-        <div class="card bg-light mb-4">
-          <div class="card-body"><pre><code><span class="text-muted">// Stripe credentials</span>
-stripePublishableKey: 'pk_test_Zzd814nldl91104qor5911gjald',
-stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald'</code></pre>
-          </div>
-        </div>
-        <blockquote><small>If your app doesn't need payment processing, it will still work without Stripe configuration. In this case, all references to billing will just be omitted from the UI.</small></blockquote>
-      </div>
-      <div class="position-relative my-5" purpose="setup-step">
-        <div style="left: 0; top: 0; width: 140px;" class="position-absolute d-none d-lg-block">
-          <img alt="computer with sails logo on screen" src="/images/setup-customize.png" class="w-100"/>
-        </div>
-        <h5>Customize</h5>
-        <p>Once the initial configuration is done, you're ready to start building out the rest of your app.</p>
-        <p>We worked hard to make this starter app's structure consistent and its files are as bare-bones as possible, so it's easy to add new pages and business logic following the conventions we set up. If you run into trouble, have a look at <a href="/faq">your new FAQ page</a>, which covers the tools we used and how to customize.  For a deeper dive, check out the Sails <a href="https://courses.platzi.com/courses/sails-js/">walkthrough</a>, <a href="https://sailsjs.com/documentation">reference documentation</a> and <a href="https://sailsjs.com/support">support</a> pages.</p>
-      </div>
     </div>
-    <hr/>
-    <div class="text-center py-5" purpose="pep-talk">
-      <h3>Let's get to work.</h3>
-      <p style="max-width: 800px;" class="mx-auto">We think this project is a pretty convenient starting point, but of course there's no one-size-fits-all solution. The good news is, this app is in your hands now, so you can jump into the files and adapt it to your needs. Change some code around. Break stuff.  Fix it. And above all: <strong>make something people want to use</strong>.</p>
-      <p class="mb-5"><span class="text-muted">&hearts;</span> <a href="https://sailsjs.com/about" class="border-0">The Sails Team</a></p>
-    </div>
-  </div>
 </div>
 <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

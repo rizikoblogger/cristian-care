@@ -163,7 +163,15 @@ without necessarily having a billing card.`
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    // n/a
+    //
+    forumquestions: {
+      collection: 'Forumquestion',
+      via: 'creator'
+    },
+    forumanswers: {
+      collection: 'Forumanswer',
+      via: 'creator'
+    }
 
   },
 
