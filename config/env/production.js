@@ -236,7 +236,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -389,7 +389,7 @@ module.exports = {
   ***************************************************************************/
   custom: {
     baseUrl: process.env.BASE_URL,
-    internalEmailAddress: 'support@example.com',
+    internalEmailAddress: 'blogger@riziko.com.br',
 
     sendgridSecret: process.env.SENDGRID_SECRET,
     stripeSecret: process.env.STRIPE_SECRET,
