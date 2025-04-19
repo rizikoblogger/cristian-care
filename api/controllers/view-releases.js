@@ -24,15 +24,16 @@ module.exports = {
         [
           {
             date: '2025-04-16',
-            name: '1.0.0-Leviticus',
-            url: '',
+            name: '2025.1-Leviticus',
+            url: '/versions/cuidado-cristao-2025-1.zip',
             details: 'Added Dockerfile for containerization and optimized asset paths in layout files. Added Forum capabilities'
           },
           {
             date: '2024-06-01',
             name: '0.0.2-Exodus',
             url: '',
-            details: 'Added Sermon feature'},
+            details: 'Added Sermon feature'
+          },
           {
             date: '2024-01-05',
             name: '0.0.1-Genesys',
